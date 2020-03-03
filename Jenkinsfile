@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     triggers {
-        git url :'https://github.com/lucas-atomic/maven-project'
+        git url :'https://github.com/lucas-atomic/maven-project.git'
         pollSCM('* * * * *')
     }
 
