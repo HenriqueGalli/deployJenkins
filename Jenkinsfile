@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     triggers {
+        git url ='https://github.com/lucas-atomic/maven-project.git'
         pollSCM('* * * * *')
     }
 
@@ -21,7 +22,7 @@ pipeline {
             parallel {
                 stage ('Deploy to Staging'){
                     steps {
-                        sh  'git add. | git commit -m "Teste deploy" | git push'
+                        sh  'deploy '
                         
                     }
                 }
