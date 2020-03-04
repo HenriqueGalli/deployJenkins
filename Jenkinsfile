@@ -22,7 +22,7 @@ pipeline {
             parallel {
                 stage ('Deploy to Staging'){
                     steps {
-                        sh  'deploy '
+                        sh  'mvn deploy package'
                         
                     }
                 }
